@@ -19,4 +19,6 @@ function iterate(){
 
 	process.send({data})
 	data = []
+
+	// console.log("worker", process.pid, process.memoryUsage().rss / 1024 / 1024)
 }

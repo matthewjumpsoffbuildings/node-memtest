@@ -12,7 +12,7 @@ const numCPUs = Math.max(2, require('os').cpus().length)
 for (var i = 0; i < numCPUs-1; i++) {
 	const worker = child_process.fork('./worker')
 	workers.push(worker)
-	worker.on('message', function(message){ workerListener(worker, message)})
+	worker.on('message', (message)=>{ workerListener(worker, message)})
 }
 
 

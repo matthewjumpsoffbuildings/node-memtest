@@ -5,6 +5,7 @@ process.on('message', (message)=>{
 		data = data.concat(message.data)
 		if(data.length >= 5000){
 			data = []
+			// console.log("db", process.memoryUsage().rss / 1024 / 1024)
 		}
 	}
 })
